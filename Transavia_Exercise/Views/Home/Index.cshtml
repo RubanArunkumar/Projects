@@ -1,0 +1,82 @@
+﻿@model Airport
+@{
+    ViewData["Title"] = "Airports Dashboard";
+}
+
+
+<h2>Airports Dashboard</h2><div><h4><em>Source : @Model.DataFrom</em></h4></div>
+
+</br>
+
+<p>
+    <a asp-action="Create">Add New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Continent</th>
+            <th>IATA</th>
+            <th>ISO</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Status</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AirportDetails)
+        {
+            <tr>
+                <td>
+                    @item.Continent
+                </td>
+                <td>
+                    @item.Iata
+                </td>
+                <td>
+                    @item.Iso
+                </td>
+                <td>
+                    @item.Latitude
+                </td>
+                <td>
+                    @item.Longitude
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Size
+                </td>
+                <td>
+                    @item.Status
+                </td>
+                <td>
+                    @item.Type
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+
+@{
+    var prevDisabled = !Model.AirportDetails.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.AirportDetails.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-page="@(Model.AirportDetails.PageIndex - 1)"
+   asp-route-iso="@ViewData["iso"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="Index"
+   asp-route-page="@(Model.AirportDetails.PageIndex + 1)"
+   asp-route-iso="@ViewData["iso"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
+

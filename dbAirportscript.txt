@@ -1,0 +1,32 @@
+USE [test_Local]
+GO
+
+/****** Object:  Table [dbo].[AirportDetails]    Script Date: 6/26/2018 1:49:17 PM ******/
+DROP TABLE [dbo].[AirportDetails]
+GO
+
+/****** Object:  Table [dbo].[AirportDetails]    Script Date: 6/26/2018 1:49:17 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[AirportDetails](
+	[Iata] [varchar](255) NOT NULL,
+	[Longitude] [varchar](255) NULL,
+	[Iso] [varchar](255) NULL,
+	[Status] [varchar](255) NULL,
+	[Name] [varchar](255) NULL,
+	[Continent] [varchar](255) NULL,
+	[Type] [varchar](255) NULL,
+	[Latitude] [varchar](255) NULL,
+	[Size] [varchar](255) NULL,
+ CONSTRAINT [PK_AirportDetails] PRIMARY KEY CLUSTERED 
+(
+	[Iata] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

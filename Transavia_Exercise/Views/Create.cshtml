@@ -1,0 +1,101 @@
+﻿@model AirportData.Models.AirportDetails
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Add Airport Details</h2>
+<body>
+    <form asp-action="Create">
+            <table>
+                <tr>
+                    <td>
+                        <label for="Iata">Iata:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Iata" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Longitude">Longitude:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Longitude" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Iso">Iso:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Iso" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Status">Status:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Status" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Name">Name:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Name" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Continent">Continent:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Continent" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Type">Type:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Type" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Latitude">Latitude:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Latitude" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Size">Size:</label>
+                    </td>
+                    <td>
+                        <input asp-for="Size" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h4>
+                            <input type="button" value="Create" class="btn btn-default" />
+                        </h4>
+                    </td>
+                    <td>
+                        <label for="Success">@ViewData["Success"]</label>
+                    </td>
+                </tr>
+            </table>
+    </form>
+</body>
+
+
