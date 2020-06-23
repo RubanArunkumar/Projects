@@ -1,5 +1,3 @@
-# Exercise
- 
 # Introduction
 In this exercise you will create a basic .NET solution from scratch. Create this exercise using C# and Visual Studio (2015 or higher). This document describes the two major components, how you structure your solution is up to you.
 The worker
